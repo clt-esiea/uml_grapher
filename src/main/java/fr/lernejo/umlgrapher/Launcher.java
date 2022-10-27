@@ -14,7 +14,7 @@ class Launcher implements Callable<Integer> {
     private final Class<?>[] initClasses = {};
 
     @Option(names = {"-g", "--graph-type"}, description = "Sélectionner le type de graph que l'on souhaite en sortie !", defaultValue = "GraphType.Mermaid")
-    private final GraphType graphType = GraphType.MERMAID;
+    private final GraphType graphType = GraphType.Mermaid;
 
     @Override
     public Integer call() throws Exception {

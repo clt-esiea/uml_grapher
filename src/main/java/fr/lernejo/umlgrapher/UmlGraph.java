@@ -6,15 +6,18 @@ public class UmlGraph {
         this.newClass = newClass;
     }
     public String as(GraphType graphType) {
-        String resultGraph = "diagram";
+        String resultGraph = "classDiagram\n";
             for (Class count : newClass) {
                 switch (graphType) {
-                    case MERMAID:
-                        resultGraph+=" class "+count.getSimpleName()+"{";
+                    case Mermaid:
+                        resultGraph=resultGraph+"class "+count.getSimpleName()+" {\n";
+
                         if(count.isInterface()) {
-                            resultGraph+="<<interface>>\n";
+
+                            resultGraph=resultGraph+" <<interface>>\n";
                         }
-                        resultGraph+="}\n";
+                        resultGraph=resultGraph+"}\n";
+                        
                         break;
                 }
             }

@@ -8,10 +8,7 @@ import org.junit.jupiter.api.Test;
 class UmlGraphTests {
     @Test
     void empty_interface_with_no_relation() {
-        //UmlGraph graph = new UmlGraph(Machin.class);
-        Class[] machinClass = new Class[]{Machin.class};
-        //UmlGraph graph = new UmlGraph(Machin.class);
-        UmlGraph graph = new UmlGraph(machinClass);
+        UmlGraph graph = new UmlGraph(Machin.class);
         String output = graph.as(GraphType.Mermaid);
 
         Assertions.assertThat(output).isEqualTo("""

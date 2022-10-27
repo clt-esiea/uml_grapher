@@ -2,10 +2,22 @@ package fr.lernejo.umlgrapher;
 
 public class UmlGraph {
     private final Class[] newClass;
-    public UmlGraph(Class[] newClass) {
+    public UmlGraph(Class... newClass) {
         this.newClass = newClass;
     }
     public String as(GraphType graphType) {
-        return null;
+        String resultGraph = "diagram";
+            for (Class count : newClass) {
+                switch (graphType) {
+                    case Mermaid:
+                        resultGraph+=" class "+count.getSimpleName()+"{";
+                        if(count.isInterface()) {
+                            resultGraph+="<<interface>>\n";
+                        }
+                        resultGraph+="}\n";
+                        break;
+                }
+            }
+            return resultGraph;
     }
 }

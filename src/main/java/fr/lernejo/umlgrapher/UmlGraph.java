@@ -1,15 +1,11 @@
 package fr.lernejo.umlgrapher;
 
 public class UmlGraph {
-    public UmlGraph(Class elementClass) {
-
+    private final Class[] newClass;
+    public UmlGraph(Class[] newClass) {
+        this.newClass = newClass;
     }
     public String as(GraphType graphType) {
-        return """
-        classDiagram
-        class Machin {
-            <<interface>>
-        }
-        """;
+        return null;
     }
 }

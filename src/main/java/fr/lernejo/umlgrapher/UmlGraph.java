@@ -9,7 +9,7 @@ public class UmlGraph {
         String resultGraph = "diagram";
             for (Class count : newClass) {
                 switch (graphType) {
-                    case Mermaid:
+                    case MERMAID:
                         resultGraph+=" class "+count.getSimpleName()+"{";
                         if(count.isInterface()) {
                             resultGraph+="<<interface>>\n";

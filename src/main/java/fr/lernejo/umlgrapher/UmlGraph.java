@@ -8,16 +8,16 @@ public class UmlGraph {
     public String as(GraphType graphType) {
         String resultGraph = "classDiagram\n";
             for (Class count : newClass) {
-                switch (graphType) {
+                switch(graphType) {
                     case Mermaid:
                         resultGraph=resultGraph+"class "+count.getSimpleName()+" {\n";
 
                         if(count.isInterface()) {
 
-                            resultGraph=resultGraph+" <<interface>>\n";
+                            resultGraph=resultGraph+"    <<interface>>\n";
                         }
                         resultGraph=resultGraph+"}\n";
-                        
+
                         break;
                 }
             }

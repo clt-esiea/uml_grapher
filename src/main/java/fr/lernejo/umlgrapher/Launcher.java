@@ -7,6 +7,7 @@ import picocli.CommandLine.Parameters;
 import java.util.concurrent.Callable;
 
 @Command(name = "Launcher", mixinStandardHelpOptions = true)
+public
 class Launcher implements Callable<Integer> {
 
     @Option(names = {"-c", "--classes"}, description = "Renseigner les classes d'où faire partir l'analyse !")

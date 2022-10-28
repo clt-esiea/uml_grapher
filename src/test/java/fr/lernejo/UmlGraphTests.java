@@ -2,6 +2,7 @@ package fr.lernejo;
 
 import fr.lernejo.umlgrapher.GraphType;
 import fr.lernejo.umlgrapher.UmlGraph;
+import fr.lernejo.umlgrapher.Launcher;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 
@@ -17,6 +18,10 @@ class UmlGraphTests {
                 <<interface>>
             }
             """);
+    }
+    @Test
+    void test_the_launcher() {
+        new Launcher();
     }
 
     interface Machin {

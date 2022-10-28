@@ -15,4 +15,13 @@ class SampleTest {
             .as("Addition of 2 and 2")
             .isEqualTo(4);
     }
+
+    @Test
+    void add_4_and_4_should_return_8() {
+        int result = sample.op(Sample.Operation.ADD, 4, 4);
+
+        Assertions.assertThat(result)
+            .as("Addition of 4 and 4")
+            .isEqualTo(8);
+    }
 }

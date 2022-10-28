@@ -24,4 +24,13 @@ class SampleTest {
             .as("Addition of 4 and 4")
             .isEqualTo(8);
     }
+
+    @Test
+    void multi_4_and_4_should_return_16() {
+        int result = sample.op(Sample.Operation.MULT, 4, 4);
+
+        Assertions.assertThat(result)
+            .as("Multiplication of 4 and 4")
+            .isEqualTo(16);
+    }
 }
